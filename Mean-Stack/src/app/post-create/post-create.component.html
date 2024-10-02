@@ -1,0 +1,17 @@
+<form>
+   <mat-card>
+    <mat-form-field>
+        <mat-label>Title</mat-label>
+        <input matInput #taitle>
+      </mat-form-field>
+    <mat-form-field>
+        <mat-label>Leave a comment</mat-label>
+        <textarea matInput #text></textarea>
+      </mat-form-field>
+      <button color="accent" mat-raised-button (click)="addText(text.value,taitle.value)">Save post</button>
+   </mat-card>
+
+   <app-post-list [addPost]="addedPost"></app-post-list>
+   
+  </form>
+  

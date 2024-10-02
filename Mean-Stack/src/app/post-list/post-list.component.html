@@ -1,0 +1,11 @@
+<br>
+<mat-accordion *ngIf="addPost?.length>0">
+    <mat-expansion-panel *ngFor="let post of addPost">
+        <mat-expansion-panel-header>
+        {{post?.postTitle}}
+        </mat-expansion-panel-header>
+        {{post?.postContent}}
+        <button >DELETE</button>
+    </mat-expansion-panel>
+</mat-accordion>
+<P *ngIf="addPost?.length<=0">NO POSTS YET</P>
